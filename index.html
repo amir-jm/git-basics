@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-uncompressed.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+    <script>
+        $(function(e){
+            $("a:has(img.gallery)").click(amir);
+                function amir(){
+                var largepath=$(this).attr("href");
+                var caption = $(this).attr("title");
+
+                $("#namayesh").attr({src:largepath});
+                $("#caption1").text(caption);
+                return false;
+            }
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="tasvir-bozorg">
+        <img id="namayesh" src="image\ghalb-large.png" alt="photo" width="400" height="300">
+        <p id="caption1">this is ghalb photo</p>
+    </div>
+    <div id="aksha">
+        <a href="image\ghalb-large.png" target="_blank" title="this is ghalb photo"><img width="200" height="150" class="gallery" src="image\ghalb.png" alt=""></a>
+        <a href="image\type-large.jpg" target="_blank" title="this is type photo"><img width="200" height="150" class="gallery" src="image\type.jpg" alt=""></a>
+        <a href="image\window-large.jpg" target="_blank" title="this is windo photo"><img width="200" height="150" class="gallery" src="image\window.jpg" alt=""></a>
+    </div>
+    <textarea name="" id="" cols="30" rows="10" style="margin-bottom: 100px; max-width: 500px;min-width: 500px;"></textarea>
+
+</body>
+</html>
